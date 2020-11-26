@@ -9,7 +9,7 @@ body {
     background: white;
 }
 
-#inputContainer {
+#start, #final {
     margin: 100px;
     padding: 100px 20px;
     justify-content: center;
@@ -18,14 +18,16 @@ body {
 #userLabel {
     display: inline-block;
     margin: 5px;
-    border-radius: 10px;
+   
 }
 
 #username {
     margin: 5px;
     width: 200px;
+    border-radius: 2px;
 }
-#startButton {
+
+#startBtn, #finalBtn {
     margin: 5px;
     display: inline-block;
     padding: 5px;
@@ -33,7 +35,13 @@ body {
     color: white;
     width: 200px;
     border-radius: 5px;
+    
 }
 h1 {
     font-weight: bold;
+    font-size: 2em;
+    margin: 50px 0px;
+}
+h2 {
+    margin: 20px 0px;
 }

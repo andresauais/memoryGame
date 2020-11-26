@@ -9,22 +9,26 @@
     <div class="container">
         <section id="gameContainer">
             <section id="start">
-                <div id="inputContainer">
+                <form action="/" method="GET">
                     <h1>Choose a user name</h1>
-                    <label id="userLabel">User name</label><br>
+                    <label for="user">User name</label><br>
                     <input type="text" id="username" placeholder="Mark" required><br>
-                    <button id="startButton">Start</button>
-                </div>
+                    <button id="startBtn" type="submit">Start</button>
+                </form>
+                    
             </section>
             <section id="game" class="memoryGame">
 
             </section>
             <section id="final">
-
+                <h1>Well done!</h1>
+                <h2>You won in 15 seconds</h2>
+                <button id="finalBtn">Play Again</button>
             </section>
         </section>
         <section id="scoreboard">
         </section>
     </div>
 </body>
+<script src="js/userinput.js"></script>
 </html>
