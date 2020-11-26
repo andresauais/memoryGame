@@ -1,5 +1,5 @@
 var backgrounds= document.getElementsByClassName("backImage");
-var imgs= document.getElementById('game');
+var imgs= document.getElementById('gameGrid');
 
 window.onload=function(){
     console.log(backgrounds[0])

@@ -67,6 +67,7 @@ const imgArray = [
     }
 ];
 const grid = document.querySelector('.grid');
+const randomImgArray=randomImageOrder(imgArray);
 function createGrid(){
         for (let i = 0; i < imgArray.length*2; i++){
             const card = document.createElement('button');
@@ -75,7 +76,7 @@ function createGrid(){
             card.setAttribute("class", "buttonImage");
             const btnDiv = document.createElement('div');
             btnDiv.setAttribute("class", "backImage");
-            card.appendChild.btnDiv;
+            card.appendChild(btnDiv);
             card.setAttribute('id', "button"+i);
             grid.appendChild(card);
         }
