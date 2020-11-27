@@ -87,10 +87,12 @@ h2 {
 
 
 .buttonImage{
-    background-image: url('https://picsum.photos/id/237/200/200');
     width: 20%;
     height: 5.5em;
     margin: 2.5%;
+}
+.hiddenButton{
+    visibility: hidden;
 }
 
 .backImage{
