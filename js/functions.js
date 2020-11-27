@@ -27,7 +27,3 @@ function randomImageOrder(array) {
   return array;
 }
 
-
-
-
-
