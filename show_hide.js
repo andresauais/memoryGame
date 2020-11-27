@@ -3,7 +3,7 @@ var imgs= document.getElementById('gameGrid');
 var pairOfImages=[];
 var correctAnswers=0;
 var canClick=false;
-var isHardMode = document.getElementById("hard").checked;
+//var isHardMode = document.getElementById("hard").checked;
 
 window.onload=function(){
     setTimeout(hideAllImages, 3000);
@@ -67,9 +67,9 @@ function imageClick(event){
                     setTimeout(checkIfWinner, 2000);
                 }else{
                     setTimeout(hidePairOfImg, 3000);
-                    if(isHardMode){
+                    /*if(isHardMode){
                         setTimeout(youLose, 3000);
-                    }
+                    }*/
                 }
             }
         }else{
