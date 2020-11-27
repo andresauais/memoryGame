@@ -71,10 +71,27 @@ h2 {
     margin: 20px 0px;
 }
 
+#gameContainer{
+    width: 50%;
+}
+
 #game{
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+#displayClock {
+    position: absolute;
+    top:10px;
+    background: grey;
+    width: 10em;
+    height: 30px;
+    padding: 7px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px -5px 0 2px #4454;
 
 }
 .grid{

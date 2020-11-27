@@ -3,7 +3,11 @@ var imgs= document.getElementById('gameGrid');
 var pairOfImages=[];
 var correctAnswers=0;
 var canClick=false;
-var isHardMode = false;
+//var isHardMode = document.getElementById("hard").checked;
+
+window.onload=function(){
+    setTimeout(hideAllImages, 3000);
+}
 
 imgs.addEventListener('click', imageClick)
 
@@ -105,12 +109,12 @@ function finishGame(){
         //to-do
 }
 const startBtn = document.getElementById("startBtn");
-//const currentPlayer = document.getElementById("currentPlayer");
+const currentPlayer = document.getElementById("currentPlayer");
 const username = document.getElementById("username");
-//const score = document.getElementById("score");
+const score = document.getElementById("score");
 
-//currentPlayer.innerHTML = "";
-//score.innerHTML = "";
+currentPlayer.innerHTML = "";
+score.innerHTML = "";
 
 
 startBtn.addEventListener("click", startGame);
@@ -118,14 +122,12 @@ document.getElementById("final").style.display = "none";
 
 function startGame(){
     document.getElementById("start").style.display = "none";
-    //currentPlayer.innerHTML = username.value;
-    //score.innerHTML = "Currently playing..."
+    currentPlayer.innerHTML = username.value;
+    score.innerHTML = "Currently playing..."
     createGrid();
     backgrounds= document.getElementsByClassName("backImage");
     pairOfImages=[];
     correctAnswers=0;
     canClick=false;
     isHardMode = document.getElementById("hard").checked;
-    
-    setTimeout(hideAllImages, 3000);
 }

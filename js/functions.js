@@ -1,9 +1,12 @@
+
 const grid = document.querySelector(".grid");
 const randomImgArray = randomImageOrder(imgArray);
+
+
 function createGrid() {
-  for (let i = 0; i < imgArray.length * 2; i++) {
+  for (let i = 0; i < randomImgArray.length; i++) {
     const card = document.createElement("button");
-    card.style.backgroundImage = imgArray[i].img;
+    card.style.backgroundImage = randomImgArray[i].img;
     card.style.backgroundSize = "cover";
     card.setAttribute("class", "buttonImage");
     const btnDiv = document.createElement("div");
@@ -23,4 +26,8 @@ function randomImageOrder(array) {
   }
   return array;
 }
-createGrid();
+
+
+
+
+

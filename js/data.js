@@ -1,5 +1,5 @@
 let ranking=[{name: 'pedro', score: 25},{name: 'alberto', score: 26},{name: 'alex', score: 23},{name: 'juan', score: 18}
-]
+];
 const imgArray = [
     {
       name: "bottle",
