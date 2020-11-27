@@ -5,17 +5,21 @@
     <link rel="stylesheet" href="style.css">
     <title>Memory</title>
     <link id="style" rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <section id="gameContainer">
             <section id="start">
-                <form action="/" method="GET">
+                <div>
                     <h1>Choose a user name</h1>
                     <label for="user">User name</label><br>
                     <input type="text" id="username" placeholder="Mark" required><br>
                     <button id="startBtn" type="submit">Start</button>
-                </form>
+                    <input type="checkbox" id="hard">
+                    <label>Difficulty: Hard</label>
+                </dvi>
             </section>
             <section id="game" class="memoryGame">
                 <div id="gameGrid" class="grid"></div>
@@ -47,6 +51,7 @@
     <script src="randomOrder.js"></script>
     <script src="functions.js"></script>
     <script src="show_hide.js"></script>
+    <script src="js/reload_game.js"></script>
 </body>
 <script src="js/userinput.js"></script>
 </html>
