@@ -71,6 +71,10 @@ h2 {
     margin: 20px 0px;
 }
 
+#gameContainer{
+    width: 50%;
+}
+
 #game{
     display: flex;
     justify-content: center;

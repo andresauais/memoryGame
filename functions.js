@@ -105,4 +105,7 @@ function randomImageOrder(array) {
   }
   return array;
 }
-createGrid();
+
+
+
+

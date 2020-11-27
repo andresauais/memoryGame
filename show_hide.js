@@ -108,7 +108,22 @@ function finishGame(){
         //change page
         //to-do
 }
+const startBtn = document.getElementById("startBtn");
+const currentPlayer = document.getElementById("currentPlayer");
+const username = document.getElementById("username");
+const score = document.getElementById("score");
+
+currentPlayer.innerHTML = "";
+score.innerHTML = "";
+
+
+startBtn.addEventListener("click", startGame);
+document.getElementById("final").style.display = "none";
+
 function startGame(){
+    document.getElementById("start").style.display = "none";
+    currentPlayer.innerHTML = username.value;
+    score.innerHTML = "Currently playing..."
     createGrid();
     backgrounds= document.getElementsByClassName("backImage");
     pairOfImages=[];
