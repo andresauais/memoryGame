@@ -1,4 +1,0 @@
-const final = document.getElementById("finalBtn");
-document.addEventListener("click", () => {
-    window.location.reload();
-});
