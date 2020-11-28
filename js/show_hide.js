@@ -106,7 +106,7 @@ function finishGame(){
 }
 const startBtn = document.getElementById("startBtn");
 //const currentPlayer = document.getElementById("currentPlayer");
-const username = document.getElementById("username");
+//const username = document.getElementById("username");
 //const score = document.getElementById("score");
 
 //currentPlayer.innerHTML = "";
@@ -117,15 +117,20 @@ startBtn.addEventListener("click", startGame);
 document.getElementById("final").style.display = "none";
 
 function startGame(){
-    document.getElementById("start").style.display = "none";
-    //currentPlayer.innerHTML = username.value;
-    //score.innerHTML = "Currently playing..."
-    createGrid();
-    backgrounds= document.getElementsByClassName("backImage");
-    pairOfImages=[];
-    correctAnswers=0;
-    canClick=false;
-    isHardMode = document.getElementById("hard").checked;
-    
-    setTimeout(hideAllImages, 3000);
+    let haveUsername=getUsername();
+    console.log(haveUsername);
+    if(haveUsername){
+        console.log('2');
+        document.getElementById("start").style.display = "none";
+        //currentPlayer.innerHTML = username.value;
+        //score.innerHTML = "Currently playing..."
+        createGrid();
+        backgrounds= document.getElementsByClassName("backImage");
+        pairOfImages=[];
+        correctAnswers=0;
+        canClick=false;
+        isHardMode = document.getElementById("hard").checked;
+        setTimeout(hideAllImages, 3000);
+        showRanking();
+    }
 }

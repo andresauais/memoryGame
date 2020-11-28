@@ -4,6 +4,9 @@ function showRanking(){
     rankingTable='<div class="sidebar"><h2>User Scores</h2>';
     var scoreboard=document.getElementById('scoreboard')
     rankingSorted=ranking.sort(function(a, b) {
+        if(typeof b!==Text){
+            return -2;
+        }
         return a.score - b.score;
       });
     rankingSorted.forEach(position => {
