@@ -1,12 +1,12 @@
 window.onload = init;
-
+let id;
 let h = 0;
 let m = 0;
 let s = 0;
 
 function init() {
     document.getElementById("displayClock").innerHMTL ="00:00:00";
-    document.getElementById("startBtn").addEventListener("click", cronometer);
+    //document.getElementById("startBtn").addEventListener("click", cronometer);
     document.getElementById("finalBtn").addEventListener("click", restartTime);
 };
 
@@ -27,22 +27,22 @@ function writeTime(){
 };
 
 function cronometer(){
-    setInterval(writeTime, 1000);
-    document.getElementById("startBtn").removeEventListener("click", cronometer);   
+    id = setInterval(writeTime, 1000);
+    //document.getElementById("startBtn").removeEventListener("click", cronometer);   
 };
 
 function stopTime(){
-    const id = setInterval(writeTime, 1000);
+    //const id = setInterval(writeTime, 1000);
     clearInterval(id);
-    document.getElementById("startBtn").addEventListener("click", cronometer);
+    //document.getElementById("startBtn").addEventListener("click", cronometer);
 }
 
 function restartTime(){
-    const id = setInterval(writeTime, 1000);
+    //const id = setInterval(writeTime, 1000);
     clearInterval(id);
     document.getElementById("displayClock").innerHTML="00:00:00";
     h=0;m=0;s=0;
-    document.querySelector("startBtn").addEventListener("click",cronometer);
+    //document.querySelector("startBtn").addEventListener("click",cronometer);
 };
 
 function getTime(){

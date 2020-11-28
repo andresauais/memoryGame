@@ -101,6 +101,9 @@ function youLose(){
 }
 function finishGame(){
     alert('you Win');
+    stopTime();
+    ranking[ranking.length-1].score=getTime();
+    showRanking();
         //change page
         //to-do
 }
@@ -118,9 +121,8 @@ document.getElementById("final").style.display = "none";
 
 function startGame(){
     let haveUsername=getUsername();
-    console.log(haveUsername);
     if(haveUsername){
-        console.log('2');
+        cronometer();
         document.getElementById("start").style.display = "none";
         //currentPlayer.innerHTML = username.value;
         //score.innerHTML = "Currently playing..."
