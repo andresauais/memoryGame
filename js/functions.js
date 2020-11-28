@@ -2,6 +2,9 @@
 const grid = document.querySelector(".grid");
 const randomImgArray = randomImageOrder(imgArray);
 
+  document.getElementById("start").style.display = "block";
+  document.getElementById('final').style.display='none';
+  document.getElementById('gameSection').style.display='none';
 
 function createGrid() {
   for (let i = 0; i < randomImgArray.length; i++) {
@@ -16,7 +19,6 @@ function createGrid() {
     grid.appendChild(card);
   }
 }
-showRanking();
 function randomImageOrder(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * i);

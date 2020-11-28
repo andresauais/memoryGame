@@ -60,16 +60,17 @@ function imageClick(event){
                 if(areTheSameImage()){
                     correctAnswers++;
                     setTimeout(hidePairOfButtons, 2000);
-                    setTimeout(checkIfWinner, 2000);
+                    setTimeout(checkIfWinner, 1000);
                 }else{
-                    setTimeout(hidePairOfImg, 1000);
-                    /*if(isHardMode){
-                        setTimeout(youLose, 3000);
-                    }*/
+
+                    setTimeout(hidePairOfImg, 3000);
+                    if(isHardMode){
+                        setTimeout(youLose, 1000);
+                    }
                 }
             }
         }else{
-            //hideImage(b);
+            hideImage(b);
         }
     }
 }
@@ -95,22 +96,33 @@ function checkIfWinner(){
 }
 function youLose(){
     alert('you lose');
-    document.getElementById("game").style.display = "none";
-    document.getElementById("final").style.display = "block";
-    //change page
-        //to-do
+    stopTime();
+    ranking.pop();
+    showRanking();
+    document.getElementById('result').innerHTML='You lose :(';
+    document.getElementById('finalScore').innerHTML='';
+    document.getElementById("start").style.display = "none";
+    document.getElementById('final').style.display='block';
+    document.getElementById('gameSection').style.display='none';
+    grid.innerHTML='';
 
 }
 function finishGame(){
     alert('you Win');
-    document.getElementById("game").style.display = "none";
-    document.getElementById("final").style.display = "block";
-        //change page
-        //to-do
+    stopTime();
+    let fScore=getTime()
+    ranking[ranking.length-1].score=fScore;
+    showRanking();
+    document.getElementById('result').innerHTML='Well done!';
+    document.getElementById('finalScore').innerHTML='You won in '+fScore+' seconds';
+    document.getElementById("start").style.display = "none";
+    document.getElementById('final').style.display='block';
+    document.getElementById('gameSection').style.display='none';
+    grid.innerHTML='';
 }
 const startBtn = document.getElementById("startBtn");
 //const currentPlayer = document.getElementById("currentPlayer");
-const username = document.getElementById("username");
+//const username = document.getElementById("username");
 //const score = document.getElementById("score");
 
 //currentPlayer.innerHTML = "";
@@ -121,14 +133,21 @@ startBtn.addEventListener("click", startGame);
 document.getElementById("final").style.display = "none";
 
 function startGame(){
-    document.getElementById("start").style.display = "none";
-    //currentPlayer.innerHTML = username.value;
-    //score.innerHTML = "Currently playing..."
-    createGrid();
-    backgrounds= document.getElementsByClassName("backImage");
-    pairOfImages=[];
-    correctAnswers=0;
-    canClick=false;
-    isHardMode = document.getElementById("hard").checked;
-    setTimeout(hideAllImages, 3000);
+    let haveUsername=getUsername();
+    if(haveUsername){
+        cronometer();
+        document.getElementById("start").style.display = "none";
+        document.getElementById('final').style.display='none';
+        document.getElementById('gameSection').style.display='block';
+        //currentPlayer.innerHTML = username.value;
+        //score.innerHTML = "Currently playing..."
+        createGrid();
+        backgrounds= document.getElementsByClassName("backImage");
+        pairOfImages=[];
+        correctAnswers=0;
+        canClick=false;
+        isHardMode = document.getElementById("hard").checked;
+        setTimeout(hideAllImages, 3000);
+        showRanking();
+    }
 }
