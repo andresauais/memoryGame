@@ -35,11 +35,10 @@ body {
 }
 
 #start, #final {
-    margin: 100px;
+    /* margin: 100px; */
     padding: 100px 20px;
     justify-content: center;
-}
-
+} 
 #userLabel {
     display: inline-block;
     margin: 5px;
@@ -47,13 +46,13 @@ body {
 }
 
 #username {
-    margin: 5px;
+    margin: 5px 0;
     width: 200px;
     border-radius: 2px;
 }
 
 #startBtn, #finalBtn {
-    margin: 5px;
+    margin: 5px 0;
     display: inline-block;
     padding: 5px;
     background: black;
@@ -172,6 +171,7 @@ h2 {
 .sidebar__user {
     margin: .5em;
     display: flex;
+    width: 100%;
     justify-content: space-between;
 }
 /*++++++++++++++++

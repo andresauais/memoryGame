@@ -27,5 +27,4 @@ function setNewValueToRanking(n, value){
     ranking.push({name: n, score: value });
 }
 
-setNewValueToRanking("name", initialScore);
 

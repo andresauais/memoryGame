@@ -14,7 +14,8 @@ function getUsername(){
         alert("User name must not be empty");
         return false;
     }else{
-        setNewValueToRanking(username.value, 'Currently playing...')
+        setNewValueToRanking(username.value, 'Currently playing...');
+        username.value = "";
         return true;
     }
 }
