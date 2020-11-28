@@ -1,5 +1,7 @@
 var rankingTable='';
 
+showRanking();
+
 function showRanking(){
     rankingTable='<div class="sidebar"><h2>User Scores</h2>';
     var scoreboard=document.getElementById('scoreboard')

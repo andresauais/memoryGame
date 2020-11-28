@@ -102,10 +102,14 @@ function youLose(){
 function finishGame(){
     alert('you Win');
     stopTime();
-    ranking[ranking.length-1].score=getTime();
+    let fScore=getTime()
+    ranking[ranking.length-1].score=fScore;
     showRanking();
-        //change page
-        //to-do
+    document.getElementById('result').innerHTML='Well done!';
+    document.getElementById('finalScore').innerHTML='You won in '+fScore+' seconds';
+    document.getElementById("start").style.display = "none";
+    document.getElementById('final').style.display='block';
+    document.getElementById('gameSection').style.display='none';
 }
 const startBtn = document.getElementById("startBtn");
 //const currentPlayer = document.getElementById("currentPlayer");
@@ -124,6 +128,8 @@ function startGame(){
     if(haveUsername){
         cronometer();
         document.getElementById("start").style.display = "none";
+        document.getElementById('final').style.display='none';
+        document.getElementById('gameSection').style.display='block';
         //currentPlayer.innerHTML = username.value;
         //score.innerHTML = "Currently playing..."
         createGrid();
