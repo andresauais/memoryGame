@@ -60,16 +60,16 @@ function imageClick(event){
                 if(areTheSameImage()){
                     correctAnswers++;
                     setTimeout(hidePairOfButtons, 2000);
-                    setTimeout(checkIfWinner, 2000);
+                    setTimeout(checkIfWinner, 1000);
                 }else{
                     setTimeout(hidePairOfImg, 3000);
-                    /*if(isHardMode){
-                        setTimeout(youLose, 3000);
-                    }*/
+                    if(isHardMode){
+                        setTimeout(youLose, 1000);
+                    }
                 }
             }
         }else{
-            //hideImage(b);
+            hideImage(b);
         }
     }
 }
@@ -95,8 +95,15 @@ function checkIfWinner(){
 }
 function youLose(){
     alert('you lose');
-    //change page
-        //to-do
+    stopTime();
+    ranking.pop();
+    showRanking();
+    document.getElementById('result').innerHTML='You lose :(';
+    document.getElementById('finalScore').innerHTML='';
+    document.getElementById("start").style.display = "none";
+    document.getElementById('final').style.display='block';
+    document.getElementById('gameSection').style.display='none';
+    grid.innerHTML='';
 
 }
 function finishGame(){
@@ -110,6 +117,7 @@ function finishGame(){
     document.getElementById("start").style.display = "none";
     document.getElementById('final').style.display='block';
     document.getElementById('gameSection').style.display='none';
+    grid.innerHTML='';
 }
 const startBtn = document.getElementById("startBtn");
 //const currentPlayer = document.getElementById("currentPlayer");
