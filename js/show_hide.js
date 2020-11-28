@@ -62,7 +62,7 @@ function imageClick(event){
                     setTimeout(hidePairOfButtons, 2000);
                     setTimeout(checkIfWinner, 2000);
                 }else{
-                    setTimeout(hidePairOfImg, 3000);
+                    setTimeout(hidePairOfImg, 1000);
                     /*if(isHardMode){
                         setTimeout(youLose, 3000);
                     }*/
@@ -95,12 +95,16 @@ function checkIfWinner(){
 }
 function youLose(){
     alert('you lose');
+    document.getElementById("game").style.display = "none";
+    document.getElementById("final").style.display = "block";
     //change page
         //to-do
 
 }
 function finishGame(){
     alert('you Win');
+    document.getElementById("game").style.display = "none";
+    document.getElementById("final").style.display = "block";
         //change page
         //to-do
 }
@@ -126,6 +130,5 @@ function startGame(){
     correctAnswers=0;
     canClick=false;
     isHardMode = document.getElementById("hard").checked;
-    
     setTimeout(hideAllImages, 3000);
 }

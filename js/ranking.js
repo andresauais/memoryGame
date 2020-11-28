@@ -1,4 +1,5 @@
 var rankingTable='';
+var initialScore = "currenty playing..."
 
 function showRanking(){
     rankingTable='<div class="sidebar"><h2>User Scores</h2>';
@@ -18,4 +19,6 @@ function showRanking(){
 function setNewValueToRanking(n, value){
     ranking.push({name: n, score: value });
 }
+
+setNewValueToRanking("name", initialScore);
 
