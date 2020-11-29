@@ -75,6 +75,7 @@ input::placeholder {
     font-size: .9rem;
     letter-spacing: 1px;
     line-height: 2;
+    outline: none;
     cursor: pointer;
     transition: all 200 ease-in-out;
 }
@@ -114,11 +115,12 @@ input::placeholder {
     visibility: hidden;
 }
 .backImage{
-    background-color: #223344;
+    background-color: var(--main);
     width:100%;
     height: 100%;
     opacity:0%;
-    transition: all 0.5s ease-in-out  ;
+    outline: none;
+    transition: all 0.5s ease-in-out;
 }
 .showBackground{
     opacity:100%;
