@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <title>Memory</title>
     <link id="style" rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <section id="gameContainer">
             <section id="start">
-                <div>
-                    <h1>Choose a user name</h1>
-                    <label for="user">User name</label><br>
-                    <input type="text" id="username" required><br>
-                    <button id="startBtn" type="submit">Start</button><br>
-                    <input type="checkbox" id="hard">
-                    <label>Difficulty: Hard</label>
+                <div class="wrapper">
+                    <h1>Choose a username</h1>
+                    <label for="user" class="username">Username</label>
+                    <input type="text" id="username" class="username" placeholder="Enter a username" required>
+                    <button id="startBtn" class="btn" type="submit">Start</button>
+                    <div>
+                        <input type="checkbox" id="hard">
+                        <label>Difficulty: Hard</label>
+                    </div>
                 </div>
             </section>
             <section id="gameSection" class="memoryGame">
-                <div id="displayClock"></div>
-                <div id="gameGrid" class="grid"></div>
+                <div class="wrapper">
+                    <div id="displayClock"></div>
+                    <div id="gameGrid" class="grid"></div>
+                </div>
+
             </section>
             <section id="final">
-                <h1 id="result">Well done!</h1>
-                <h2 id='finalScore'>You won in 15 seconds</h2>
-                <button id="finalBtn">Play Again</button>
+                <div class="wrapper">
+                    <h1 id="result">Well done!</h1>
+                    <h2 id='finalScore'>You won in 15 seconds</h2>
+                    <button id="finalBtn" class="btn">Play Again</button>
+                </div>
             </section>
         </section>
         <section id="scoreboard">

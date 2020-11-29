@@ -1,3 +1,9 @@
+:root {
+    --main: #2A97DF;
+    --bg: #1A1F26;
+    --text: #45494F;
+    --lightText: #F9F9FA;
+}
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +11,43 @@
 }
 
 body {
-    background: #ddd;
+    background: var(--bg);
+    color: var(--lightText);
     padding: 3em 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-weight: 300;
+    font-size: 2.5em;
+    margin: 50px 0px;
+    color: var(--main);
+}
+h2 {
+    margin: 20px 0px;
+}
+label.username {
+    color: var(--text);
+    font-size: 1.2rem;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+input.username {
+    margin-top: .5em;
+    width: 200px;
+    height: 35px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: border 200ms ease-in-out;
+}
+input:hover {
+    border: 2px solid var(--main);
+}
+input::placeholder {
+    color: #aaa;
 }
 .container {
     display: flex;
@@ -16,70 +56,35 @@ body {
     align-items: center;
     padding: 3em;
 }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80vh;
+}
 .btn {
-    display: inline-block;
-    background: black;
-    color: white;
+    margin: .5em 0;
+    background: var(--main);
+    color: var(--lightText);
     width: 200px;
     height: 35px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid var(--main);
+    font-weight: 600;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    line-height: 2;
     cursor: pointer;
     transition: all 200 ease-in-out;
 }
 .btn:hover {
-    border: 1px solid black;
-    color: black;
-    background: white;
-
+    color: var(--main);
+    background: var(--lightText);
 }
-
-#start, #final {
-    /* margin: 100px; */
-    padding: 100px 20px;
-    justify-content: center;
-} 
-#userLabel {
-    display: inline-block;
-    margin: 5px;
-   
-}
-
-#username {
-    margin: 5px 0;
-    width: 200px;
-    border-radius: 2px;
-}
-
-#startBtn, #finalBtn {
-    margin: 5px 0;
-    display: inline-block;
-    padding: 5px;
-    background: black;
-    color: white;
-    width: 200px;
-    border-radius: 5px;
-    
-}
-h1 {
-    font-weight: bold;
-    font-size: 2em;
-    margin: 50px 0px;
-}
-h2 {
-    margin: 20px 0px;
-}
-
-#gameContainer{
-    width: 50%;
-}
-
-#game{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
+/*+++++++++
+    GAME
++++++++++*/
 #displayClock {
     position: absolute;
     top:10px;
@@ -91,28 +96,23 @@ h2 {
     color: white;
     border-radius: 5px;
     box-shadow: 5px -5px 0 2px #4454;
-
 }
 .grid{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    height: 80%;
-    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
     background-color: rgb(216, 212, 212);
+    padding: .5em;
 }
-
-
-
 .buttonImage{
-    width: 20%;
-    height: 5.5em;
-    margin: 2.5%;
+    width: 100px;
+    height: 100px;
+    margin: .5em;
+    margin-bottom: 0;
 }
 .hiddenButton{
     visibility: hidden;
 }
-
 .backImage{
     background-color: #223344;
     width:100%;
@@ -120,45 +120,15 @@ h2 {
     opacity:0%;
     transition: all 0.5s ease-in-out  ;
 }
-
 .showBackground{
     opacity:100%;
-}
-
-/*++++++++++++++++
-    INITIAL PAGE
-++++++++++++++++*/
-#inputContainer {
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    padding: 0 2em;
-    margin-bottom: 1em;
-    border-radius: 5px;
-}
-#inputContainer > h1 {
-    font-size: 2em;
-}
-#userLabel {
-    display: inline-block;
-    margin: 5px;
-}
-#username {
-    width: 200px;
-    height: 35px;
-    padding-left: 5px;
-    border-radius: 5px;
-    border: 1px solid black;
 }
 /*++++++++++++
     SIDEBAR
 ++++++++++++*/
 .sidebar {
     min-height: 350px;
-    background: #fff;
+    background: var(--lightText);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -167,12 +137,22 @@ h2 {
 }
 .sidebar > h2 {
     margin-bottom: 1em;
+    color: var(--text);
+    font-weight: 300;
 }
 .sidebar__user {
     margin: .5em;
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+.sidebar__user > h4 {
+    color: var(--text);
+    font-weight: 700;
+}
+.sidebar__user > p {
+    color: var(--text);
+    font-weight: 300;
 }
 /*++++++++++++++++
     MEDIA QUERY
@@ -184,10 +164,6 @@ h2 {
     .container {
         flex-direction: row;
         align-items: center;
-    }
-    #inputContainer {
-        margin-bottom: 0;
-        padding: 0 4em;
     }
     .sidebar {
         margin-left: 2em;
