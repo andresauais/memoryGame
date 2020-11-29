@@ -97,7 +97,7 @@ function checkIfWinner(){
 function youLose(){
     alert('you lose');
     stopTime();
-    ranking.pop();
+    ranking.splice(0,1);
     showRanking();
     document.getElementById('result').innerHTML='You lose :(';
     document.getElementById('finalScore').innerHTML='';
