@@ -169,7 +169,7 @@ input::placeholder {
     .container {
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        /*justify-content: space-around;*/
     }
     .sidebar {
         margin-left: 2em;
