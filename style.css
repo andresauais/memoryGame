@@ -134,7 +134,7 @@ input::placeholder {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0 2em;
 }
 .sidebar > h2 {
