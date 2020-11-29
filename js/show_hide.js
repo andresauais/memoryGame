@@ -95,7 +95,6 @@ function checkIfWinner(){
     }
 }
 function youLose(){
-    alert('you lose');
     stopTime();
     ranking.splice(0,1);
     showRanking();
@@ -108,7 +107,6 @@ function youLose(){
 
 }
 function finishGame(){
-    alert('you Win');
     stopTime();
     let fScore=getTime()
     ranking[0].score=fScore;
