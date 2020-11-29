@@ -19,7 +19,7 @@ body {
 }
 h1 {
     font-weight: 300;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin: 50px 0px;
     color: var(--main);
 }
@@ -62,6 +62,7 @@ input::placeholder {
     justify-content: center;
     align-items: flex-start;
     height: 80vh;
+    position: relative;
 }
 .btn {
     margin: .5em 0;
@@ -88,15 +89,16 @@ input::placeholder {
 +++++++++*/
 #displayClock {
     position: absolute;
-    top:10px;
-    background: grey;
+    top: -1em;
+    left: 0;
+    background: var(--lightText);
     width: 10em;
     height: 30px;
     padding: 7px;
     text-align: center;
-    color: white;
+    color: var(--text);
     border-radius: 5px;
-    box-shadow: 5px -5px 0 2px #4454;
+    box-shadow: -4px 4px 0px 1px var(--text);
 }
 .grid{
     display: grid;
@@ -104,6 +106,7 @@ input::placeholder {
     width: 100%;
     background-color: rgb(216, 212, 212);
     padding: .5em;
+    margin-top: 1em;
 }
 .buttonImage{
     width: 100px;
@@ -166,6 +169,7 @@ input::placeholder {
     .container {
         flex-direction: row;
         align-items: center;
+        justify-content: space-around;
     }
     .sidebar {
         margin-left: 2em;
