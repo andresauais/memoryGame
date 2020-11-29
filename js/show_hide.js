@@ -111,7 +111,7 @@ function finishGame(){
     alert('you Win');
     stopTime();
     let fScore=getTime()
-    ranking[ranking.length-1].score=fScore;
+    ranking[0].score=fScore;
     showRanking();
     document.getElementById('result').innerHTML='Well done!';
     document.getElementById('finalScore').innerHTML='You won in '+fScore+' seconds';
