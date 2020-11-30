@@ -9,7 +9,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     background: var(--bg);
     color: var(--lightText);
@@ -54,7 +53,7 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3em;
+    padding: 0;
 }
 .wrapper {
     display: flex;
@@ -169,7 +168,8 @@ input::placeholder {
     .container {
         flex-direction: row;
         align-items: center;
-        /*justify-content: space-around;*/
+        justify-content: space-around;
+        padding: 3em;
     }
     .sidebar {
         margin-left: 2em;

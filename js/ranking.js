@@ -12,7 +12,7 @@ function showRanking(){
         }else if(typeof a.score=='string'){
             return -1;
         }
-           return (a.score - b.score); 
+           return (a.score - b.score);
       });
     ranking.forEach(position => {
         rankingTable+='<div class="sidebar__user"><h4>'+position.name+'</h4><p>'+position.score;

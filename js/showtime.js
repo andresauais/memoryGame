@@ -11,8 +11,8 @@ function init() {
 };
 
 function writeTime(){
-    let hAux = 0; 
-    let mAux = 0; 
+    let hAux = 0;
+    let mAux = 0;
     let sAux = 0;
     s++;
     if (s>59){m++;s=0;}
@@ -28,7 +28,7 @@ function writeTime(){
 
 function cronometer(){
     id = setInterval(writeTime, 1000);
-    //document.getElementById("startBtn").removeEventListener("click", cronometer);   
+    //document.getElementById("startBtn").removeEventListener("click", cronometer);
 };
 
 function stopTime(){
